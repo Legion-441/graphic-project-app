@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import PanoramaIcon from '@mui/icons-material/Panorama';
+import { Link } from 'react-router-dom';
 
 const pages = [{label: 'Galeria inspiracji', ref: '/inspirationgallery'}, {label: 'Blog', ref: '/blog'}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,12 +41,11 @@ function ResponsiveAppBar() {
     <AppBar position="static" sx={{ backgroundColor: '#078080', color: '#232323'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <PanoramaIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -55,7 +56,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            BIEDA PINTEREST
+            <Link to={'/'}>BIEDA PINTEREST</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -89,12 +90,12 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.label}</Typography>
+                  <Typography textAlign="center"><Link to={page.ref}>{page.label}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <PanoramaIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -111,18 +112,18 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BIEDA PINTEREST
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Link
                 key={page.label}
                 onClick={handleCloseNavMenu}
-                href={page.ref}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                to={page.ref}
+                // sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page.label}
-              </Button>
+              </Link>
             ))}
           </Box>
 
