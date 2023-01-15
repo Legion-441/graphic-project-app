@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import PanoramaIcon from '@mui/icons-material/Panorama';
 import { Link } from 'react-router-dom';
 
-const pages = [{label: 'Galeria inspiracji', ref: '/inspirationgallery'}, {label: 'Blog', ref: '/blog'}];
+const pages = [{label: 'Galeria inspiracji', ref: '/inspirationgallery', id: 1}, {label: 'Blog', ref: '/blog', id: 2}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
+            component="div"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -98,8 +98,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component="div"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -115,7 +114,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link to={page.ref} className="MyLink">
+              <Link to={page.ref} className="MyLink" key={page.id}>
                 <Button
                   key={page.label}
                   onClick={handleCloseNavMenu}
