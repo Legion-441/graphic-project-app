@@ -1,3 +1,8 @@
 #root > * {
   text-align: center;
 }
+
+.MyLink {
+  color: inherit;
+  text-decoration: inherit;
+}

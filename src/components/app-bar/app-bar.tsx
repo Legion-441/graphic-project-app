@@ -11,11 +11,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import PanoramaIcon from '@mui/icons-material/Panorama';
 import { Link } from 'react-router-dom';
 
-const pages = [{label: 'Galeria inspiracji', ref: '/inspirationgallery'}, {label: 'Blog', ref: '/blog'}];
+const pages = [{label: 'Galeria inspiracji', ref: '/inspirationgallery', id: 1}, {label: 'Blog', ref: '/blog', id: 2}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -45,7 +44,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
+            component="div"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -56,7 +55,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <Link to={'/'}>BIEDA PINTEREST</Link>
+            <Link to={'/'} className="MyLink">BIEDA PINTEREST</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -90,7 +89,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"><Link to={page.ref}>{page.label}</Link></Typography>
+                  <Typography textAlign="center"><Link to={page.ref} className="MyLink">{page.label}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -99,8 +98,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component="div"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -112,17 +110,18 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            BIEDA PINTEREST
+            <Link to={'/'} className="MyLink">BIEDA PINTEREST</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link
-                key={page.label}
-                onClick={handleCloseNavMenu}
-                to={page.ref}
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page.label}
+              <Link to={page.ref} className="MyLink" key={page.id}>
+                <Button
+                  key={page.label}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page.label}
+                </Button>
               </Link>
             ))}
           </Box>
