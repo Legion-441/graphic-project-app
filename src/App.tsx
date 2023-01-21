@@ -6,6 +6,7 @@ import HomeView from './views/home/home';
 import InspirationGallery from './views/inspiration-gallery/inspiration-gallery';
 import MainView from './views/main/main';
 import NotFound from './views/not-found/not-found';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App: React.FC = () => {

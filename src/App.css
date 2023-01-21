@@ -4,6 +4,28 @@
   text-align: center;
 }
 
+.d-block {
+  height: 880px;
+}
+
+.layout {
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.picture {
+  width: 900px;
+
+}
+.text-paragraph {
+  width: 700px;
+}
+
+.new-align {
+  align-items: center;
+}
+
 .MyLink {
   color: inherit;
   text-decoration: inherit;
