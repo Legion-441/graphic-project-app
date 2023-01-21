@@ -5,7 +5,6 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from "@mui/material";
 
-
 const ImagesList: React.FC = () => {
   const [images, setImages] = useState<ImagesDto>([])
   useEffect(() => {
