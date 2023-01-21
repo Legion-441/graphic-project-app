@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react"
 import { apiService } from "../../services/api/api.service"; 
-import { ImagesDto } from "../../services/api/types"; 
+import { ImageListProps, ImagesDto } from "../../services/api/types"; 
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from "@mui/material";
 
-const ImagesList: React.FC = () => {
+const ImagesList: React.FC<ImageListProps> = (props) => {
+  const { searchedValues } = props
+  const defaultSearch = ['interior', 'design', 'home', 'decor', 'indoor']
+
   const [images, setImages] = useState<ImagesDto>([])
   useEffect(() => {
     (async() => {
-      const imagesData: ImagesDto | undefined = await apiService.getImagesByQuery(['industrial', 'interior', 'design', 'home', 'decor', 'indoor']);
+      const valuesToSend = searchedValues.length > 0 ? searchedValues : defaultSearch;
+      const imagesData: ImagesDto | undefined = await apiService.getImagesByQuery(valuesToSend);
       if (imagesData) {
         setImages(imagesData)
       }
     })()
-  }, [])
+  }, [searchedValues])
 
   const sizes = {
     width: 1400,

@@ -2,10 +2,15 @@ import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
+import ImagesList from '../image-list/images';
+import { FilterOption } from '../../services/api/types';
 
 export default function Tags() {
-  const [selected, setSelected]: Array<any> = React.useState([]);
-  
+  const [selected, setSelected] = React.useState<FilterOption[]>([]);
+  const searchedValues = React.useMemo<string[]>(() => {
+    return selected.map((element: FilterOption) => element.value)
+  }, [selected])
+
   return (
     <div>
       <Stack spacing={3} sx={{ mt: 5, marginInline: 'auto', width: 1400 }}>
@@ -15,6 +20,7 @@ export default function Tags() {
           options={styleNames}
           getOptionLabel={(option) => option.label}
           filterSelectedOptions
+          value={selected}
           renderInput={(params) => (
             <TextField
               {...params}
@@ -25,6 +31,7 @@ export default function Tags() {
           onChange={(event, value) => (setSelected(value))}
         />
       </Stack>
+      <ImagesList searchedValues={searchedValues}/>
     </div>
   );
 }
