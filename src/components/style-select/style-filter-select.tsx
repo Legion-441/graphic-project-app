@@ -13,7 +13,7 @@ export default function Tags() {
 
   return (
     <div>
-      <Stack spacing={3} sx={{ mt: 5, marginInline: 'auto', width: 1400 }}>
+      <Stack spacing={3} sx={{ p: 2, mt: 5, marginInline: 'auto', width: 1400 }}>
         <Autocomplete
           multiple
           id="tags-outlined"
@@ -46,7 +46,7 @@ const styleNames = [
   {label: 'rustykalny', value: 'rustic'},
   {label: 'glamour', value: 'glamour'},
   {label: 'vintage', value: 'vintage'},
-  {label: 'boho', value: 'boho'},
+  {label: 'boho', value: 'bohemian'},
   {label: 'Hampton', value: 'Hampton'},
-  {label: 'art déco', value: 'art déco'},
+  {label: 'art déco', value: 'artdéco'},
 ];

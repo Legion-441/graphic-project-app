@@ -6,16 +6,13 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from "@mui/material";
 
 const ImagesList: React.FC<ImageListProps> = (props) => {
-  const baseSearch = ['interior', 'design', 'home', 'decor', 'indoor']
   const { searchedValues } = props
-  const finalSearch = [...baseSearch, ...searchedValues]
-
+  
   const [images, setImages] = useState<ImagesDto>([])
   useEffect(() => {
     (async() => {
-      const valuesToSend = finalSearch;
-      console.log(finalSearch);
-      
+      const valuesToSend = ['interiors', ...searchedValues]
+      console.log(valuesToSend);
       const imagesData: ImagesDto | undefined = await apiService.getImagesByQuery(valuesToSend);
       if (imagesData) {
         setImages(imagesData)
@@ -31,8 +28,8 @@ const ImagesList: React.FC<ImageListProps> = (props) => {
   const itemSize = Math.ceil((sizes.width-((sizes.cols-1)*sizes.gap))/sizes.cols)
 
   return (
-    <Box sx={{ width: 1400, marginInline: 'auto', height: 'min-content'}}>
-      <ImageList variant="masonry" cols={6} gap={8}>
+    <Box sx={{ width: 1400, marginInline: 'auto', height: 'min-content'}} className={'galleryContainer'}>
+      <ImageList variant="masonry" cols={6} gap={8} sx={{ p: 2 }}>
         {images.map((item) => (
           <ImageListItem key={item.urls.raw}>
             <img

@@ -30,6 +30,11 @@
   color: inherit;
   text-decoration: inherit;
 }
+
+.galleryContainer img {
+  border-radius: 4px;
+}
+
 .carousel-picture {
   width: 100%;
   height: 93vh;
@@ -73,3 +78,4 @@
 .button-link {
   text-decoration: none;
 }
+
