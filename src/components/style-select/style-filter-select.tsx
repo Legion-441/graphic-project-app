@@ -46,7 +46,7 @@ const styleNames = [
   {label: 'rustykalny', value: 'rustic'},
   {label: 'glamour', value: 'glamour'},
   {label: 'vintage', value: 'vintage'},
-  {label: 'boho', value: 'boho'},
+  {label: 'boho', value: 'bohemian'},
   {label: 'Hampton', value: 'Hampton'},
-  {label: 'art déco', value: 'art déco'},
+  {label: 'art déco', value: 'artdéco'},
 ];

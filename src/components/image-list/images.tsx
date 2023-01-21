@@ -6,13 +6,12 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from "@mui/material";
 
 const ImagesList: React.FC<ImageListProps> = (props) => {
-  const baseSearch = ['interior', 'design', 'home', 'decor', 'indoor']
   const { searchedValues } = props
-  const valuesToSend = [...baseSearch, ...searchedValues]
-
+  
   const [images, setImages] = useState<ImagesDto>([])
   useEffect(() => {
     (async() => {
+      const valuesToSend = ['interiors', ...searchedValues]
       console.log(valuesToSend);
       const imagesData: ImagesDto | undefined = await apiService.getImagesByQuery(valuesToSend);
       if (imagesData) {
