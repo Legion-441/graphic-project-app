@@ -5,7 +5,6 @@ const InspirationGallery: React.FC = () => {
 
   return <>
     <Tags/>
-    <ImagesList/>
   </>
 }
 
