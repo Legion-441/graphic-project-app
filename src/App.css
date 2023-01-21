@@ -30,3 +30,7 @@
   color: inherit;
   text-decoration: inherit;
 }
+
+.galleryContainer img {
+  border-radius: 4px;
+}
