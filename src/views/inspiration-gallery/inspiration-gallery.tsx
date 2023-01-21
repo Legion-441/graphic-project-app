@@ -1,10 +1,10 @@
 import MultipleSelectCheckmarks from "../../components/style-select/style-select"
-import ImagesList from "../../components/image-list/images"
+import StandardImageList from "../../components/image-list/image-list"
 
 const InspirationGallery: React.FC = () => {
   return <>
     <MultipleSelectCheckmarks/>
-    <ImagesList/>
+    <div><StandardImageList/></div>
   </>
 }
 
