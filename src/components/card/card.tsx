@@ -1,47 +1,49 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Placeholder from 'react-bootstrap/Placeholder';
+import GalleryPic from '../../assets/gallery.jpg'
+import NextPic from '../../assets/Next.jpg'
+import BlogPic from '../../assets/blog.jpg'
+import { Link } from 'react-router-dom';
 
 function CardSection () {
   return (
     <div className="d-flex justify-content-around layout">
       <Card style={{ width: '24rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={GalleryPic} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>Galeria Inspiracji</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo architecto, quia incidunt cumque inventore numquam labore laborum consequatur eveniet voluptatum harum. Velit aperiam dignissimos totam cupiditate nam incidunt voluptate?
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Link to={'/InspirationGallery'}>
+            <Button variant="primary">Sprawdź galerię inspiracji</Button>
+          </Link>
         </Card.Body>
       </Card>
 
       <Card style={{ width: '24rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={BlogPic} />
         <Card.Body>
-          <Placeholder as={Card.Title} animation="glow">
-            <Placeholder xs={6} />
-          </Placeholder>
-          <Placeholder as={Card.Text} animation="glow">
-            <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
-            <Placeholder xs={6} /> <Placeholder xs={8} />
-          </Placeholder>
-          <Placeholder.Button variant="primary" xs={6} />
+        <Card.Title>Blog</Card.Title>
+          <Card.Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo architecto, quia incidunt cumque inventore numquam labore laborum consequatur eveniet voluptatum harum. Velit aperiam dignissimos totam cupiditate nam incidunt voluptate?
+          </Card.Text>
+          <Link to={'/Blog'}>
+            <Button variant="primary">Sprawdź nasz blog</Button>
+          </Link>
         </Card.Body>
       </Card>
 
       <Card style={{ width: '24rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={NextPic} />
         <Card.Body>
-          <Placeholder as={Card.Title} animation="glow">
-            <Placeholder xs={6} />
-          </Placeholder>
-          <Placeholder as={Card.Text} animation="glow">
-            <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
-            <Placeholder xs={6} /> <Placeholder xs={8} />
-          </Placeholder>
-          <Placeholder.Button variant="primary" xs={6} />
+        <Card.Title>Lorem ipsum</Card.Title>
+          <Card.Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo architecto, quia incidunt cumque inventore numquam labore laborum consequatur eveniet voluptatum harum. Velit aperiam dignissimos totam cupiditate nam incidunt voluptate?
+          </Card.Text>
+          <Link to={'/InspirationGallery'}>
+            <Button variant="primary">Lorem ipsum</Button>
+          </Link>
         </Card.Body>
       </Card>
 
