@@ -8,6 +8,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+const avatarSubtitle = {
+  marginLeft: "20px",
+};
+const avatarSubtitle2 = {
+  color: "grey",
+};
+
 const articleHeaderStyle = {
   color: "black",
   padding: "30px",
@@ -27,11 +34,11 @@ const BlogList: React.FC = () => {
                 component="img"
                 alt="first-article-card"
                 height="200"
-                image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1258&q=80"
+                image="https://images.unsplash.com/photo-1617104424032-b9bd6972d0e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA5fHxpbnRlcmlvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Glamour
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -45,10 +52,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
@@ -64,7 +79,7 @@ const BlogList: React.FC = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Rustykalny
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -78,10 +93,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/2380795/pexels-photo-2380795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
@@ -97,7 +120,7 @@ const BlogList: React.FC = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Nowoczesny
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -111,10 +134,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/1804514/pexels-photo-1804514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
@@ -126,11 +157,11 @@ const BlogList: React.FC = () => {
                 component="img"
                 alt="fourth-article-card"
                 height="200"
-                image="https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+                image="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjI3fHxpbnRlcmlvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Skandynawski
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -144,10 +175,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/1006202/pexels-photo-1006202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
@@ -163,7 +202,7 @@ const BlogList: React.FC = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Klasyczny
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -177,10 +216,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
@@ -196,7 +243,7 @@ const BlogList: React.FC = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lorem
+                  Elektryczny
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -210,10 +257,18 @@ const BlogList: React.FC = () => {
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/2156416/pexels-photo-2156416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle}
+                >
                   John Cena
                 </Typography>
-                <Typography variant="subtitle2" component="p">
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  style={avatarSubtitle2}
+                >
                   12.01.2022
                 </Typography>
               </CardActions>
