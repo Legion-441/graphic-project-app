@@ -1,11 +1,7 @@
 import React from "react";
 
-const BlogHeader: React.FC = () => {
-  return (
-    <div>
-      <h1>Header</h1>
-    </div>
-  );
+const SearchBar: React.FC = () => {
+  return <div></div>;
 };
 
-export default BlogHeader;
+export default SearchBar;
