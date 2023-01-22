@@ -13,7 +13,7 @@ export default function Tags() {
 
   return (
     <div>
-      <Stack spacing={3} sx={{ p: 2, mt: 5, marginInline: 'auto', width: 1400 }}>
+      <Stack spacing={3} sx={{ p: 2, mt: 15, marginInline: 'auto', width: 1400 }}>
         <Autocomplete
           multiple
           id="tags-outlined"
